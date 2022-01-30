@@ -48,6 +48,10 @@ public class CreateAccountPage extends BasePage{
         saveButton.click();
     }
 
+    public boolean isPageDisplayed(){
+        return firstNameTextBox.isDisplayed();
+    }
+
 
     public CreateAccountPage(WebDriver driver) {
         super(driver);

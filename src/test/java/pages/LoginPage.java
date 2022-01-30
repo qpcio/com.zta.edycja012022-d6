@@ -12,9 +12,6 @@ public class LoginPage extends BasePage{
         createNewAccountLink.click();
     }
 
-
-
-
     public LoginPage(WebDriver driver) {
         super(driver);
     }

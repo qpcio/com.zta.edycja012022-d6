@@ -9,14 +9,18 @@ public class TopMenuPage extends BasePage{
     private WebElement signInButton;
 
     @FindBy(css = "#_desktop_user_info .account>span")
-    private WebElement userNameDisplyed;
+    private WebElement userNameDisplayed;
 
     public void signIn(){
         signInButton.click();
     }
 
-    public String getUserNameDisplyed() {
-        return userNameDisplyed.getText();
+    public String getUserNameDisplayed() {
+        return userNameDisplayed.getText();
+    }
+
+    public void openHomePage(){
+        driver.get("http://146.59.32.4/index.php");
     }
 
     public TopMenuPage(WebDriver driver) {
