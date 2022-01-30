@@ -25,7 +25,7 @@ public class CreateAccountTests extends BaseTest {
         loginPage.goToCreateNewAccountPage();
         createAccountPage.registerUser(firstName,lastname,email,password,birthdate);
         //then
-        Assert.assertEquals(topMenuPage.getUserNameDisplayed(),expectedName);
+        Assert.assertEquals(topMenuPage.getUserNameDisplayed(),expectedName, "Otrzymałem nieoczekiwane imie");
     }
 
     @Test
@@ -39,13 +39,14 @@ public class CreateAccountTests extends BaseTest {
         TopMenuPage topMenuPage = new TopMenuPage(driver);
         LoginPage loginPage = new LoginPage(driver);
         CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+
         topMenuPage.openHomePage();
         //when
         topMenuPage.signIn();
         loginPage.goToCreateNewAccountPage();
         createAccountPage.registerUser(firstName,lastname,email,password,birthdate);
         //then
-        Assert.assertTrue(createAccountPage.isPageDisplayed());
+        Assert.assertTrue(createAccountPage.isPageDisplayed(),"Wyświetlona jest zła strona");
     }
     
 
